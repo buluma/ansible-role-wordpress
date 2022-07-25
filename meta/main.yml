@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  role_name: wordpress
+  author: matteocastagnaro
+  description: WordPress with webserver (Nginx or Apache2)
+  company: ShadowNet
+  license: Apache-2.0
+  min_ansible_version: "2.1"
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+        - disco
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+  galaxy_tags:
+    - development
+    - web
