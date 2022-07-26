@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Install WordPress with webserver (Nginx or Apache2)
+  homepage: https://buluma.github.io/
+  topics: development, web, ansible, molecule, tox, playbook, hacktoberfest

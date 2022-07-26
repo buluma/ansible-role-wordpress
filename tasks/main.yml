@@ -82,10 +82,10 @@
     state: directory
     recurse: yes
 
-- include: nginx.yml
+- include_tasks: nginx.yml
   when: wp_webserver == "nginx"
 
-- include: apache.yml
+- include_tasks: apache.yml
   when: wp_webserver == "apache"
 
 - name: Installing mysql-server
