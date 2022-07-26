@@ -6,13 +6,13 @@
 
   tasks:
     - name: Verify Apache is serving content.
-      uri:
+      ansible.builtin.uri:
         url: http://localhost/
         status_code: 200
       register: apache_status
       tags: verify
 
     - name: Verify Apache status.
-      debug:
+      ansible.builtin.debug:
         var: apache_status.status
       tags: verify

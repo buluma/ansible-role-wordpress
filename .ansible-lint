@@ -11,3 +11,7 @@ exclude_paths:
   - ./.cache
   - ./.github
   - ./requirements.yml
+
+skip_list:  # or 'skip_list' to silence them completely
+  - no-changed-when  # Commands should not change things if nothing needs doing.
+  - risky-shell-pipe  # Shells that use pipes should set the pipefail option.

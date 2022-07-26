@@ -1,6 +1,6 @@
 ---
 - name: Wordpress | Apache | Copy virtual host configuration file
-  template:
+  ansible.builtin.template:
     src: apache-vhost.conf.j2
     dest: "/etc/apache2/sites-available/{{ wp_sitename }}.conf"
     owner: root
@@ -8,4 +8,4 @@
     mode: 0644
 
 - name: WordPress | Apache | Enable site
-  command: "sudo a2ensite {{ wp_sitename }}.conf"
+  ansible.builtin.command: "sudo a2ensite {{ wp_sitename }}.conf"
