@@ -27,8 +27,6 @@ molecule:
         tag: "focal"
       - image: "docker-ubuntu-systemd"
         tag: "jammy"
-      - image: "debian-systemd"
-        tag: "latest"
 
 testing:
   stage: test

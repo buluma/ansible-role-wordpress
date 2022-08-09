@@ -51,8 +51,6 @@ jobs:
             tag: "focal"
           - image: "docker-ubuntu-systemd"
             tag: "jammy"
-          - image: "debian-systemd"
-            tag: "latest"
     steps:
       - name: checkout
         uses: actions/checkout@v3
