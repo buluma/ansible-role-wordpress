@@ -29,8 +29,6 @@ molecule:
         tag: "jammy"
       - image: "debian-systemd"
         tag: "latest"
-      - image: "debian-systemd"
-        tag: "bookworm"
 
 testing:
   stage: test
@@ -53,5 +51,3 @@ testing:
         tag: "jammy"
       - image: "debian-systemd"
         tag: "latest"
-      - image: "debian-systemd"
-        tag: "bookworm"
