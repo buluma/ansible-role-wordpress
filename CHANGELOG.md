@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-wordpress/tree/HEAD)
+## [0.1.0](https://github.com/buluma/ansible-role-wordpress/tree/0.1.0) (2022-07-26)
 
-[Full Changelog](https://github.com/buluma/ansible-role-wordpress/compare/89440f4205b8584ad82dab8080ceca82d408b961...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-wordpress/compare/89440f4205b8584ad82dab8080ceca82d408b961...0.1.0)
 
 **Merged pull requests:**
 
