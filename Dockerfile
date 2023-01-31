@@ -1,5 +1,5 @@
 # Download base image ubuntu 20.04
-FROM ubuntu:22.04
+FROM ubuntu:23.04
 
 # LABEL about the custom image
 LABEL maintainer="admin@sysadminjournal.com"
