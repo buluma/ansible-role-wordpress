@@ -1,0 +1,13 @@
+digraph PhiloDilemma {
+  label = "Michael Buluma" ;
+  overlap=false
+  {
+    "wordpress" [fillcolor=yellow style=filled penwidth=3]
+    "buluma.bootstrap" [fillcolor=green style=filled]
+    "buluma.core_dependencies" [fillcolor=green style=filled]
+    "buluma.mysql" [fillcolor=green style=filled]
+  }
+  "wordpress" -> "buluma.bootstrap"
+  "wordpress" -> "buluma.core_dependencies"
+  "wordpress" -> "buluma.mysql"
+}
