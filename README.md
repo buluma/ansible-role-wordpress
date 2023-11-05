@@ -2,13 +2,14 @@
 
 Install WordPress with webserver (Nginx or Apache2)
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-wordpress/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-wordpress/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-wordpress/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-wordpress)|[![quality](https://img.shields.io/ansible/quality/59815)](https://galaxy.ansible.com/buluma/wordpress)|[![downloads](https://img.shields.io/ansible/role/d/59815)](https://galaxy.ansible.com/buluma/wordpress)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-wordpress.svg)](https://github.com/buluma/ansible-role-wordpress/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-wordpress.svg)](https://github.com/buluma/ansible-role-wordpress/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-wordpress.svg)](https://github.com/buluma/ansible-role-wordpress/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-wordpress/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-wordpress/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-wordpress/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-wordpress)|[![downloads](https://img.shields.io/ansible/role/d/4884)](https://galaxy.ansible.com/buluma/wordpress)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-wordpress.svg)](https://github.com/buluma/ansible-role-wordpress/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-wordpress.svg)](https://github.com/buluma/ansible-role-wordpress/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-wordpress.svg)](https://github.com/buluma/ansible-role-wordpress/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
-This example is taken from `molecule/default/converge.yml` and is tested on each push, pull request and release.
+This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-wordpress/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
+
 ```yaml
 ---
 - hosts: all
@@ -26,10 +27,11 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
     - buluma.wordpress
 ```
 
-The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
+The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-wordpress/blob/master/molecule/default/prepare.yml):
+
 ```yaml
 ---
-- name: prepare
+- name: Prepare
   hosts: all
   become: yes
   gather_facts: no
@@ -37,12 +39,15 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
   roles:
     - role: buluma.bootstrap
     - role: buluma.core_dependencies
+    - role: buluma.mysql
 ```
 
+Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
 
 ## [Role Variables](#role-variables)
 
-The default values for the variables are set in `defaults/main.yml`:
+The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-wordpress/blob/master/defaults/main.yml):
+
 ```yaml
 ---
 wp_version: 6.0.1
@@ -62,16 +67,17 @@ site_name: "{{ wp_sitename }}"
 
 ## [Requirements](#requirements)
 
-- pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-wordpress/blob/main/requirements.txt).
+- pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-wordpress/blob/master/requirements.txt).
 
-## [Status of used roles](#status-of-requirements)
+## [State of used roles](#state-of-used-roles)
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
 | Requirement | GitHub | GitLab |
 |-------------|--------|--------|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
-|[buluma.core_dependencies](https://galaxy.ansible.com/buluma/core_dependencies)|[![Build Status GitHub](https://github.com/buluma/ansible-role-core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-core_dependencies/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-core_dependencies/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-core_dependencies)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-bootstrap)|
+|[buluma.core_dependencies](https://galaxy.ansible.com/buluma/core_dependencies)|[![Build Status GitHub](https://github.com/buluma/ansible-role-core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-core_dependencies/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-core_dependencies/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-core_dependencies)|
+|[buluma.mysql](https://galaxy.ansible.com/buluma/mysql)|[![Build Status GitHub](https://github.com/buluma/ansible-role-mysql/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-mysql/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-mysql/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-mysql)|
 
 ## [Context](#context)
 
@@ -87,16 +93,14 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|ubuntu|all|
-|debian|all|
+|[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
+|[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|stretch, buster, bullseye|
 
 The minimum version of Ansible required is 2.1, tests have been done to:
 
 - The previous version.
 - The current version.
 - The development version.
-
-
 
 If you find issues, please register them in [GitHub](https://github.com/buluma/ansible-role-wordpress/issues)
 
@@ -106,8 +110,14 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-Apache-2.0
+[Apache-2.0](https://github.com/buluma/ansible-role-wordpress/blob/master/LICENSE).
 
 ## [Author Information](#author-information)
 
 [buluma](https://buluma.github.io/)
+
+Please consider [sponsoring me](https://github.com/sponsors/buluma).
+
+### [Special Thanks](#special-thanks)
+
+Template inspired by [Robert de Bock](https://github.com/robertdebock)

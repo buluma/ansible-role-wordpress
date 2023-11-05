@@ -12,7 +12,9 @@ galaxy_info:
         - all
     - name: Debian
       versions:
-        - all
+        - stretch
+        - buster
+        - bullseye
   galaxy_tags:
     - development
     - web
