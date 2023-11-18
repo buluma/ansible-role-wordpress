@@ -1,4 +1,4 @@
-# [wordpress](#wordpress)
+# [Ansible role wordpress](#wordpress)
 
 Install WordPress with webserver (Nginx or Apache2)
 
