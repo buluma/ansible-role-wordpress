@@ -1,10 +1,10 @@
-# [Ansible role wordpress](#wordpress)
+# Ansible role [wordpress](https://galaxy.ansible.com/ui/standalone/roles/buluma/wordpress/documentation)
 
 Install WordPress with webserver (Nginx or Apache2)
 
-|GitHub|Version|Issues|Pull Requests|
-|------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-wordpress/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-wordpress/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-wordpress.svg)](https://github.com/buluma/ansible-role-wordpress/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-wordpress.svg)](https://github.com/buluma/ansible-role-wordpress/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-wordpress.svg)](https://github.com/buluma/ansible-role-wordpress/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-wordpress/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-wordpress/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-wordpress.svg)](https://github.com/buluma/ansible-role-wordpress/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-wordpress.svg)](https://github.com/buluma/ansible-role-wordpress/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-wordpress.svg)](https://github.com/buluma/ansible-role-wordpress/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/wordpress)](https://galaxy.ansible.com/ui/standalone/roles/buluma/wordpress/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -110,13 +110,11 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-[Apache-2.0](https://github.com/buluma/ansible-role-wordpress/blob/master/LICENSE).
+[Apache-2.0](https://github.com/buluma/ansible-role-wordpress/blob/master/LICENSE)
 
 ## [Author Information](#author-information)
 
-[buluma](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-
-### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)
