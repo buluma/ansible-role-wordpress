@@ -96,7 +96,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
 |[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|stretch, buster, bullseye|
 
-The minimum version of Ansible required is 2.1, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done to:
 
 - The previous version.
 - The current version.
